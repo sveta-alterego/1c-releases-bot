@@ -8,7 +8,7 @@ import html
 import feedparser
 import requests
 
-RSS_URL = "https://1.ru/news/rss"   # публичная лента новостей 1С
+RSS_URL = "http://www.1c.ru/news/rss-2.0.jsp"   # публичная лента новостей 1С
 SEEN_FILE = "seen.json"             # "записная книжка" отправленных новостей
 MAX_PER_RUN = 5                     # не больше 5 сообщений за один запуск
 
