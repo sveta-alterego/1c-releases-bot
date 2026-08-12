@@ -61,6 +61,11 @@ def send_message(text):
 def main():
     seen = load_seen()
     feed = feedparser.parse(RSS_URL)
+    # --- добавляем отладку ---
+    print("Всего новостей в ленте:", len(feed.entries))
+    for i, item in enumerate(feed.entries[:5]):
+        print(f"Новость {i+1}: {item.get('title', '')}")
+    # --- конец отладки ---
     sent = 0
 
     for item in feed.entries:
